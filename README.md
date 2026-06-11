@@ -1,16 +1,50 @@
-# React + Vite
+# ☽ Horoscope App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal horoscope app built with React and Vite. Enter your date of birth and get a short, sharp reading powered by an LLM.
 
-Currently, two official plugins are available:
+![Horoscope App](https://raw.githubusercontent.com/flor-c/horoscope-app/main/src/assets/hero.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Zodiac sign detection from date of birth
+- AI-generated readings via [Groq](https://console.groq.com) (free tier)
+- Dark tarot-inspired UI with frosted glass card
+- Fully client-side — no backend required
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- [React 19](https://react.dev) + [Vite 8](https://vite.dev)
+- Plain CSS (no frameworks)
+- [Groq API](https://console.groq.com) — Llama 3.1 8B
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+1. Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/flor-c/horoscope-app.git
+cd horoscope-app
+npm install
+```
+
+2. Create a `.env` file in the root:
+
+```
+VITE_GROQ_API_KEY=your_groq_api_key_here
+```
+
+Get a free API key at [console.groq.com](https://console.groq.com).
+
+3. Start the dev server:
+
+```bash
+npm run dev
+```
+
+## Deployment
+
+Deployed on [Vercel](https://vercel.com). To deploy your own:
+
+1. Import the repo in Vercel
+2. Add `VITE_GROQ_API_KEY` as an environment variable
+3. Deploy — Vercel detects Vite automatically
